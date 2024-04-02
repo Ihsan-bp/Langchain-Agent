@@ -5,8 +5,8 @@ from fastapi import FastAPI
 app = FastAPI()
 import json
 
-
-client = MongoClient("mongodb+srv://niteshsinghal9917:bzDCS9Hmf6EOvXxP@cluster0.si0lxp7.mongodb.net/")
+#replace the actual credential of the database
+client = MongoClient("mongodb+srv://#############################")
 db = client['test']
 collection = db['timesheetcrons']
 
@@ -115,7 +115,7 @@ tools = [repl]
 
 agent = create_openai_tools_agent(
             llm=ChatOpenAI(temperature=0.1,
-                            openai_api_key = "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",
+                            openai_api_key = "sk-##############################", #use actual api key
                             model="gpt-3.5-turbo-1106"), 
                             prompt=prompt, 
                             tools=tools
